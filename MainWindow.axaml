@@ -1,0 +1,21 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="transaction_tracker.MainWindow"
+        Title="transaction_tracker">
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="5">
+            <Button Content="Load CSV" Click="OnLoadCsvClicked" Margin="0,0,10,0"/>
+        </StackPanel>
+        <SplitView>
+            <SplitView.Pane>
+                <DataGrid Name="TransactionsGrid" AutoGenerateColumns="True" />
+            </SplitView.Pane>
+            <SplitView.Content>
+                <ListBox Name="OverviewList"/>
+            </SplitView.Content>
+        </SplitView>
+    </DockPanel>  
+</Window>
